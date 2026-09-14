@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-navy: #0f2347;
+  --brand-navy-strong: #091c39;
+  --brand-cyan: #2fbed5;
+  --brand-cyan-soft: #eaf9fc;
+  --brand-slate: #475569;
+  --brand-line: #d9e2ec;
+  --brand-bg: #f8fafc;
+  --brand-white: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-brand-bg text-brand-navy antialiased;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: radial-gradient(circle at top left, rgba(47, 190, 213, 0.12), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(15, 35, 71, 0.08), transparent 24%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--brand-navy);
+  letter-spacing: -0.04em;
+}
+
+p {
+  color: var(--brand-slate);
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container-shell {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.brand-card {
+  background: linear-gradient(180deg, #f8fbff 0%, #f2fafc 100%);
+  border: 1px solid #ddeaf2;
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(15, 35, 71, 0.04);
+}
+
+.metric-pill {
+  display: inline-flex;
+  align-items: center;
+  background: white;
+  border: 1px solid var(--brand-line);
+  border-radius: 9999px;
+  padding: 0.42rem 0.8rem;
+  color: var(--brand-navy);
+  font-size: 0.78rem;
+  font-weight: 600;
+  margin: 0.2rem 0.3rem 0 0;
+}
+
+.service-card {
+  background: #ffffff;
+  border: 1px solid var(--brand-line);
+  border-radius: 16px;
+  padding: 1.2rem;
+  height: 100%;
+  box-shadow: 0 8px 20px rgba(15, 35, 71, 0.03);
+}
+
+.logo-strip {
+  margin-top: 1.2rem;
+  margin-bottom: 1.5rem;
+  padding: 1.1rem 0.8rem 0.7rem;
+  border-top: 1px solid var(--brand-line);
+  border-bottom: 1px solid var(--brand-line);
+  background: linear-gradient(180deg, rgba(248, 250, 252, 0.7), rgba(255, 255, 255, 0.9));
+  border-radius: 18px;
+}
+
+.site-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  border: 1.5px solid transparent;
+}
+
+.site-button:hover {
+  transform: translateY(-1px);
+}
+
+.site-button-primary {
+  background: var(--brand-navy);
+  color: white;
+  border-color: var(--brand-navy);
+}
+
+.site-button-primary:hover {
+  background: var(--brand-navy-strong);
+}
+
+.site-button-secondary {
+  background: white;
+  color: var(--brand-navy);
+  border-color: var(--brand-navy);
+}
